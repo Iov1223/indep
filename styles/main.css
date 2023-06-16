@@ -1,0 +1,21 @@
+header {
+    height: 80px;
+    background-color: aqua;
+}
+
+h1 {
+    margin: 0;
+}
+
+.btn {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+input {
+   height: 40px;
+   width: 70px;
+
+   background-color: aqua;
+}

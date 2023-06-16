@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Самостоятельная работа</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <script>
+
+        function generateHeader(title, navItems, bgcolor, fontcolor) {
+            document.write(`<header><div class="name"><h2>${title}</h2></div>`);
+            document.write(`<div class="btn">`)
+            for (var i in navItems)
+                document.write(`<a>${navItems[i]}</a></div></header>`);
+            
+        }
+
+        generateHeader('SiteName', ['one', 'two', 'three']);
+
+    </script>
+</body>
+</html>
