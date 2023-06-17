@@ -21,6 +21,8 @@ header {
 }
 
 .a-btn {
-    width: 100px; /*условные*/ 
-    height: 100px; /*размеры*/
+    padding: 7px 15px;
+    margin-right: 20px;
+
+    font-size: 16px;
 }
