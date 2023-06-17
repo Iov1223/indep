@@ -8,18 +8,60 @@
 </head>
 <body>
 
-    <script>
+    <!-- <header>
+        <div class="container">
+            <div class="name">
+                <h2>SiteName</h2>
+            </div>
+            <div class="btn">
+                <a class="a-btn">one</a>
+                <a class="a-btn">two</a>
+                <a class="a-btn">three</a>
+            </div>
+        </div>
+    </header> -->
 
+    <script>
         function generateHeader(title, navItems, bgcolor, fontcolor) {
-            document.write(`<header><div class="name"><h2>${title}</h2></div>`);
-            document.write(`<div class="btn">`)
-            for (var i in navItems)
-                document.write(`<a>${navItems[i]}</a></div></header>`);
-            
+            var buttons = '';
+            if (Array.isArray(navItems)) {
+                for (var i = 0; i < navItems.length; i++) {
+                    buttons += `<a class="a-btn" style="border: 2px solid ${fontcolor};">${navItems[i]}</a>`;
+                }
+            } else if (typeof navItems === 'number') {
+                for (var i = 0; i < navItems; i++) {
+                    buttons += `<a class="a-btn" style="border: 2px solid ${fontcolor};">empty</a>`;
+                }
+            }
+            document.write(`<header style="background-color: ${bgcolor}; color: ${fontcolor};">
+                    <div class="container">
+                        <div class="name">
+                            <h2>${title}</h2>
+                        </div>
+                        <div class="btn">
+                            ${buttons}
+                        </div>
+                    </div>
+                </header>`);
         }
 
-        generateHeader('SiteName', ['one', 'two', 'three']);
+        generateHeader('SiteName', 9, '#1D7471', '#FDF4ED');
 
     </script>
+
 </body>
 </html>
+
+<!-- <script>
+
+    function generateHeader(title, navItems, bgcolor, fontcolor) {
+        document.write(`<header><div class="name"><h2>${title}</h2></div>`);
+        document.write(`<div class="btn">`)
+        for (var i in navItems)
+            document.write(`<a>${navItems[i]}</a></div></header>`);
+        
+    }
+
+    //generateHeader('SiteName', ['one', 'two', 'three']);
+
+</script> -->
